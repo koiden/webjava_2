@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="pagestyle.css">
+<title>♥ Card Game ♠</title>
+
+</head>
+<body>
+<h1>♥ Card Game ♠</h1>
+<form th:action="@{/selectgame}" th:object="${selectForm}" method="post">
+
+	<div><input type="radio" th:field="*{selectGame}" value="bj" />ブラックジャック♠</div>
+	<div><input type="radio" th:field="*{selectGame}" value="hal" />♦ハイアンドロー♥</div>
+	<br />
+	<input type="submit" value="ゲームスタート">
+	<br />
+
+</form>
+</body>
+</html>
